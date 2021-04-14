@@ -6,7 +6,7 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/08 15:00:58 by david         #+#    #+#                 */
-/*   Updated: 2021/02/08 15:15:26 by david         ########   odam.nl         */
+/*   Updated: 2021/04/14 16:26:33 by yeboa         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (s == NULL)
