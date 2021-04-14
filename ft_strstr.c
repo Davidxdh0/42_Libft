@@ -6,7 +6,7 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/18 15:28:51 by david         #+#    #+#                 */
-/*   Updated: 2021/01/18 16:14:16 by david         ########   odam.nl         */
+/*   Updated: 2021/04/14 16:44:35 by yeboa         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strstr(const char *str, const char *to_find)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/09 12:00:59 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/04/09 12:03:24 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/04/14 16:42:14 by yeboa         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	if (dstsize < len_dest)
 		return (dstsize + len_src);
 	while (src[j] && (len_dest + j) < dstsize)
-			dest[i++] = src[j++];
-		if ((len_dest + j) == dstsize && dstsize > len_dest)
-			dest[--i] = '\0';
-		else
-			dest[i] = '\0';
-		return (len_src + len_dest);
+		dest[i++] = src[j++];
+	if ((len_dest + j) == dstsize && dstsize > len_dest)
+		dest[--i] = '\0';
+	else
+		dest[i] = '\0';
+	return (len_src + len_dest);
 }
