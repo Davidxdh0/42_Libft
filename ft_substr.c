@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strdup.c                                        :+:    :+:            */
+/*   ft_substr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/04/02 16:53:31 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/04/16 12:26:37 by dyeboa        ########   odam.nl         */
+/*   Created: 2021/04/16 12:28:53 by dyeboa        #+#    #+#                 */
+/*   Updated: 2021/04/16 14:25:45 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*copy;
-	int		i;
+	char			*substring;
+	unsigned int	i;
 
 	i = 0;
-	copy = (char *) malloc(ft_strlen((char *)s1) * (int) sizeof(s1) + 1);
-	if (!copy)
+	if (!s)
 		return (NULL);
-	while (s1[i] != 0)
+	substring = (char *) malloc((sizeof(char)) * ((int)len) + 1);
+	if (!substring)
+		return (NULL);
+	while (s[i] && i < len)
 	{
-		copy[i] = s1[i];
+		substring[i] = s[start];
 		i++;
+		start++;
 	}
-	copy[i] = 0;
-	return (copy);
+	substring[i] = '\0';
+	return (substring);
 }
