@@ -16,7 +16,7 @@ int	ft_atoi(char *str)
 {
 	int	i;
 	int	minorplus;
-	int	number;
+	int	number;s
 
 	number = 0;
 	i = 0;
