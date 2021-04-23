@@ -14,17 +14,39 @@
 ¬
 char **ft_split(char const *s, char c)
 {
-	char	*substr;
 	char	**str
 	int		i;
-	int		eind;
-	int		count;
-	
-	
-	**str = s;
-	i = 0;
+	int		j;
+	int		k;
+
+	i == 0;
+	j == 0;
+	if (s == 0)
+		return (0);
+	str = malloc ((delim(char *s, char c) + 1) * sizeof(char *)); 
 	// count hoeveel delimiters
 	// bij 0, wat dan?
+	if (str == 0)
+		return (0);
+	while (s[i] != '\0')
+	{
+		//array vullen
+		while (ft_strchr(charset, s[i] != 0) && s[i] != '\0')
+			i++;
+		if ()
+		
+
+	}
+	
+}
+
+int		delim(char *s, char c)
+{
+	int		count;
+	int		i;
+
+	count = 0;
+	i = 0;
 	while (!ft_strchr(str, c))
 	{
 		if (s[i] == c)
@@ -32,24 +54,8 @@ char **ft_split(char const *s, char c)
 				count++;
 		i++;
 	}
-	// array malloc met aantal delimiters
-	// 
-	// check of array er is
-	
-
-
-	// array 1 voor 1 vullen 
-	// length of delimiter
-	*str = substr;
-	if (!s || !c)
-		return (NULL);
-	while (*s1)
-	
-	woord zonder eerste delimiter
-		str = (ft_strchr(s, c))
-
-
 }
+
 
 /*
 Parameters #1. The string to be split.
@@ -68,3 +74,4 @@ ended by a NULL pointer.
 	dan die substring in een array zetten.
 	array eindigen met '\0'
  */
+
