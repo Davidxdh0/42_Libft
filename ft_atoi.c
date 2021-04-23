@@ -6,7 +6,7 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/18 15:21:41 by david         #+#    #+#                 */
-/*   Updated: 2021/04/14 13:51:20 by yeboa         ########   odam.nl         */
+/*   Updated: 2021/04/23 11:33:25 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(char *str)
 {
 	int	i;
 	int	minorplus;
-	int	number;s
+	int	number;
 
 	number = 0;
 	i = 0;

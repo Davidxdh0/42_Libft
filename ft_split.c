@@ -6,12 +6,12 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/16 16:01:58 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/04/16 16:44:01 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/04/23 12:20:26 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+¬
 char **ft_split(char const *s, char c)
 {
 	char	*substr;
@@ -24,13 +24,22 @@ char **ft_split(char const *s, char c)
 	**str = s;
 	i = 0;
 	// count hoeveel delimiters
+	// bij 0, wat dan?
 	while (!ft_strchr(str, c))
 	{
 		if (s[i] == c)
-			count++;
+			if (s[i + 1] != c)
+				count++;
 		i++;
 	}
+	// array malloc met aantal delimiters
+	// 
+	// check of array er is
 	
+
+
+	// array 1 voor 1 vullen 
+	// length of delimiter
 	*str = substr;
 	if (!s || !c)
 		return (NULL);
