@@ -20,7 +20,7 @@ char **ft_split(char const *s, char c)
 	int		k;
 
 	i == 0;
-	j == 0;
+	j == 0;ß
 	if (s == 0)
 		return (0);
 	str = malloc ((delim(char *s, char c) + 1) * sizeof(char *)); 
@@ -34,10 +34,7 @@ char **ft_split(char const *s, char c)
 		while (ft_strchr(charset, s[i] != 0) && s[i] != '\0')
 			i++;
 		if ()
-		
-
 	}
-	
 }
 
 int		delim(char *s, char c)
@@ -55,8 +52,6 @@ int		delim(char *s, char c)
 		i++;
 	}
 }
-
-
 /*
 Parameters #1. The string to be split.
 #2. The delimiter character.
