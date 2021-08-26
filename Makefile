@@ -6,7 +6,7 @@
 #    By: dyeboa <dyeboa@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/10/26 15:54:34 by dyeboa        #+#    #+#                  #
-#    Updated: 2021/04/16 16:44:10 by dyeboa        ########   odam.nl          #
+#    Updated: 2021/08/26 12:24:48 by Dun           ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,19 +54,11 @@ INCS	= .
 
 .c.o :
 	${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I${INCS}
-
 $(NAME): ${OBJS}
 	${LIBC} $(NAME) $(OBJS)
-
 all: $(NAME)
-
-bonus: $(NAME) $(OBJS_B)
-	${LIBC} $(NAME) $(OBJS_B)
-    
 fclean: clean
-	$(RM) $(NAME) $(bonus)
-
+	$(RM) $(NAME)
 clean:
 	$(RM) -f $(OBJS) $(OBJS_B)
-    
 re: fclean all
