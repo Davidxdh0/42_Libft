@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 15:50:48 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/04/16 15:37:35 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/08/26 17:20:56 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
-
-typedef struct s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}	t_list;
 
 int		ft_atoi(char *str);
 void	ft_bzero(void *s, size_t n);
