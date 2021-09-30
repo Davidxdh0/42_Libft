@@ -6,7 +6,7 @@
 #    By: dyeboa <dyeboa@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/10/26 15:54:34 by dyeboa        #+#    #+#                  #
-#    Updated: 2021/08/26 17:21:08 by dyeboa        ########   odam.nl          #
+#    Updated: 2021/09/30 17:32:37 by dyeboa        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS=		ft_atoi.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
+			ft_itoa.c \
 			ft_memccpy.c \
 			ft_memcpy.c \
 			ft_memset.c \
@@ -45,6 +46,7 @@ SRCS=		ft_atoi.c \
 			ft_substr.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
+			ft_split.c \
 			
 OBJS	= $(SRCS:.c=.o)
 RM		= rm -f
