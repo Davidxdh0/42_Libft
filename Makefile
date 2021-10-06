@@ -6,7 +6,7 @@
 #    By: dyeboa <dyeboa@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/10/26 15:54:34 by dyeboa        #+#    #+#                  #
-#    Updated: 2021/09/30 17:32:37 by dyeboa        ########   odam.nl          #
+#    Updated: 2021/10/06 13:49:23 by dyeboa        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRCS=		ft_atoi.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_split.c \
+			ft_strmapi.c \
 			
 OBJS	= $(SRCS:.c=.o)
 RM		= rm -f

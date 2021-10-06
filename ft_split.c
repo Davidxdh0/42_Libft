@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/16 16:01:58 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/09/30 17:33:18 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/10/06 14:50:12 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ int	delim(const char *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
-			if (s[i + 1] != c)
-				count++;
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
+			count++;
 		i++;
 	}
 	return (count);
