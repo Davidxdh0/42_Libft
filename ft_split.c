@@ -6,13 +6,13 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/16 16:01:58 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/09/30 17:33:18 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/10/08 14:19:28 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	delim(const char *s, char c)
+static int	delim(const char *s, char c)
 {
 	int		count;
 	int		i;
@@ -21,9 +21,10 @@ int	delim(const char *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
-			if (s[i + 1] != c)
-				count++;
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
+			count++;
 		i++;
 	}
 	return (count);
@@ -36,8 +37,6 @@ static	char	*filler(const char *s, size_t n)
 
 	i = 0;
 	str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!(str))
-		return (NULL);
 	while (s[i] && i < n)
 	{
 		str[i] = s[i];
@@ -58,7 +57,7 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	str = (char **)malloc(sizeof(char *) * (delim(s, c)) + 1);
 	if (!(str))
-		return (NULL);
+		return (str);
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -72,6 +71,5 @@ char	**ft_split(char const *s, char c)
 			j++;
 		}
 	}
-	str[k] = "\0";
 	return (str);
 }

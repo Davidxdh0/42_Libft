@@ -6,11 +6,9 @@
 #    By: dyeboa <dyeboa@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/10/26 15:54:34 by dyeboa        #+#    #+#                  #
-#    Updated: 2021/09/30 17:32:37 by dyeboa        ########   odam.nl          #
+#    Updated: 2021/10/13 15:19:28 by dyeboa        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
-
-NAME=libft.a
 
 SRCS=		ft_atoi.c \
 			ft_bzero.c \
@@ -47,20 +45,28 @@ SRCS=		ft_atoi.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_split.c \
+			ft_strmapi.c \
 			
+NAME	= libft.a
 OBJS	= $(SRCS:.c=.o)
 RM		= rm -f
-LIBC	= ar -rcs
 FLAGS	= -Wall -Wextra -Werror
 INCS	= .
 
 .c.o :
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I${INCS}
+	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+
 $(NAME): ${OBJS}
-	${LIBC} $(NAME) $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
+
 all: $(NAME)
+
+clean:
+	$(RM) -f $(OBJS)
+
 fclean: clean
 	$(RM) $(NAME)
-clean:
-	$(RM) -f $(OBJS) $(OBJS_B)
-re: fclean all
+
+re: fclean $(NAME)
+
+.PHONY:	all clean fclean
