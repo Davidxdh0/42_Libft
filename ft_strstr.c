@@ -6,11 +6,11 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/18 15:28:51 by david         #+#    #+#                 */
-/*   Updated: 2021/04/14 16:44:35 by yeboa         ########   odam.nl         */
+/*   Updated: 2021/11/04 15:15:13 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 char	*ft_strstr(const char *str, const char *to_find)
 {

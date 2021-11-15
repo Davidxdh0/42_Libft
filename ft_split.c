@@ -6,11 +6,12 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/16 16:01:58 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/10/13 15:30:37 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/11/15 13:58:08 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	delim(const char *s, char c)
 {
@@ -57,7 +58,10 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	str = (char **)malloc(sizeof(char *) * (delim(s, c)) + 1);
 	if (!(str))
+	{
+		free(str);
 		return (str);
+	}
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -73,3 +77,4 @@ char	**ft_split(char const *s, char c)
 	}
 	return (str);
 }
+

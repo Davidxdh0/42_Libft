@@ -1,0 +1,13 @@
+you still need to check for malloc fails and check for multiple operations in one line. 
+
+Too bad about the norm error, and a few mistakes. But you're doing well, and you'll get there!
+
+Todo: 
+Itoa anders maken zonder ft_strjoin
+- ft_itoa doesnt allocate enough memory in str
+    -   memleak if ft_strjoin returns NULL
+ft_split - free 2d arraz when malloc fails
+-   ft_strchr - use size_t and remove ft_strlen
+strstr?
+
+Valgrind thuis

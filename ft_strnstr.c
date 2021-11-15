@@ -6,11 +6,11 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/15 14:43:01 by david         #+#    #+#                 */
-/*   Updated: 2021/04/14 16:44:26 by yeboa         ########   odam.nl         */
+/*   Updated: 2021/11/04 15:14:52 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

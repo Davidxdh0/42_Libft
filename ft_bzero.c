@@ -6,20 +6,21 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 14:41:29 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/04/14 13:49:19 by yeboa         ########   odam.nl         */
+/*   Updated: 2021/11/04 15:10:09 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (n-- > 0)
+	while (n > 0)
 	{
 		((char *)s)[i] = 0;
+		n--;
 		i++;
 	}
 }

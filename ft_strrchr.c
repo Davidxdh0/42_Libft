@@ -6,7 +6,7 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/18 21:04:07 by david         #+#    #+#                 */
-/*   Updated: 2021/04/02 16:38:52 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/11/15 12:32:18 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = ft_strlen((char *)s);
 	if (c == 0)

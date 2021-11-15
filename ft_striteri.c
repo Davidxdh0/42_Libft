@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_substr.c                                        :+:    :+:            */
+/*   ft_striteri.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/04/16 12:28:53 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/11/04 15:15:29 by dyeboa        ########   odam.nl         */
+/*   Created: 2021/10/26 12:43:22 by dyeboa        #+#    #+#                 */
+/*   Updated: 2021/11/04 15:12:23 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char			*substring;
 	unsigned int	i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
-	substring = (char *) malloc((sizeof(char)) * ((int)len) + 1);
-	if (ft_strlen(s) < (size_t)start)
-		return (ft_strdup(""));
-	if (!substring)
-		return (NULL);
-	while (s[start] && i < len)
+	if (!s || !f)
+		return ;
+	while (!s[i])
 	{
-		substring[i] = s[start];
+		f(s[i], s + i);
 		i++;
-		start++;
 	}
-	substring[i] = '\0';
-	return (substring);
 }

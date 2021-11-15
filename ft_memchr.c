@@ -6,12 +6,11 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/09 15:04:13 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/04/14 16:24:14 by yeboa         ########   odam.nl         */
+/*   Updated: 2021/11/04 14:55:16 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
+#include <stddef.h>
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;

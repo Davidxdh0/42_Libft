@@ -6,7 +6,7 @@
 #    By: dyeboa <dyeboa@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/10/26 15:54:34 by dyeboa        #+#    #+#                  #
-#    Updated: 2021/10/13 15:30:23 by dyeboa        ########   odam.nl          #
+#    Updated: 2021/11/04 15:16:58 by dyeboa        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ SRCS=		ft_atoi.c \
 			ft_strtrim.c \
 			ft_split.c \
 			ft_strmapi.c \
+			ft_striteri.c \
 			
 NAME	= libft.a
 OBJS	= $(SRCS:.c=.o)
@@ -63,6 +64,7 @@ all: $(NAME)
 
 clean:
 	$(RM) -f $(OBJS)
+	$(RM) -f $(NAME)
 
 fclean: clean
 	$(RM) $(NAME)

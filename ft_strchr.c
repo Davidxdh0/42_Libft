@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/09 14:53:48 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/09/30 15:46:37 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/11/15 12:34:09 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	j = 0;
-	i = ft_strlen((char *)s);
+	i = ft_strlen(s);
 	if (c == 0)
 		return ((char *)s + i);
 	while (j <= i)
 	{
-		if (s[j] == (char)c)
+		if (s[j] == c)
 			return ((char *)s + j);
 		j++;
 	}

@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/30 15:17:50 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/09/30 15:58:19 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/11/15 12:45:00 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_itoa(int n)
 	if (!(str))
 		return (NULL);
 	if (n == -2147483648)
-		return (ft_memcpy(str, "-2147483648", 12));
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		str[0] = '-';
