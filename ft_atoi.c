@@ -6,11 +6,17 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/18 15:21:41 by david         #+#    #+#                 */
-/*   Updated: 2021/04/23 11:33:25 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/11/15 15:20:36 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_isspace(int c)
+{
+	return (c == '\t' || c == '\n' || c == '\v'
+		|| c == '\f' || c == '\r' || c == ' ');
+}
 
 int	ft_atoi(char *str)
 {
@@ -21,10 +27,9 @@ int	ft_atoi(char *str)
 	number = 0;
 	i = 0;
 	minorplus = 1;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+	while (ft_isspace(str[i]))
 		i++;
-	while (str[i] == 45 || str[i] == 43)
+	while (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == 45)
 			minorplus *= -1;

@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 14:28:57 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/11/04 14:55:43 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/11/15 15:23:50 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 void	*ft_memset(void *b, int c, size_t n)
 {
-	int				i;
 	unsigned char	*newb;
 
 	newb = (unsigned char *)b;
-	i = 0;
 	while (n-- > 0)
-		newb[i++] = (unsigned char)c;
+		newb[n] = (unsigned char)c;
 	return (b);
 }

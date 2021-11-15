@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 14:57:12 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/11/04 14:55:38 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/11/15 15:23:11 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (src == NULL && dst == NULL)
-		return (NULL);
+	if (src == dst)
+		return (dst);
 	while (n-- > 0)
 	{
 		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
