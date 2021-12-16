@@ -6,7 +6,7 @@
 #    By: dyeboa <dyeboa@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/10/26 15:54:34 by dyeboa        #+#    #+#                  #
-#    Updated: 2021/11/04 15:16:58 by dyeboa        ########   odam.nl          #
+#    Updated: 2021/12/16 14:33:12 by dyeboa        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ SRCS=		ft_atoi.c \
 			ft_isdigit.c \
 			ft_isprint.c \
 			ft_itoa.c \
-			ft_memccpy.c \
 			ft_memcpy.c \
 			ft_memset.c \
 			ft_putchar_fd.c \

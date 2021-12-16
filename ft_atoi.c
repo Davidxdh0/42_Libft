@@ -6,7 +6,7 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/18 15:21:41 by david         #+#    #+#                 */
-/*   Updated: 2021/11/15 15:20:36 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/12/10 10:02:00 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int	ft_atoi(char *str)
 		i++;
 	while (str[i] == '+' || str[i] == '-')
 	{
-		if (str[i] == 45)
+		if (str[i] == '-')
 			minorplus *= -1;
 		i++;
-		if (str[i] == 45 || str[i] == 43)
+		if (str[i] == '-' || str[i] == '+')
 			return (0);
 	}
 	while (ft_isdigit(str[i]))

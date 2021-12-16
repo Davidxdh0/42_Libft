@@ -6,48 +6,58 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/16 16:01:58 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/11/15 15:54:25 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/12/16 14:23:12 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 static int	delim(const char *s, char c)
 {
-	int		count;
+	int		countwords;
 	int		i;
+	int		j;
 
-	count = 0;
+	countwords = 0;
 	i = 0;
+	j = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != '\0')
-			count++;
-		else
-			break ;
-		++i;
-	}
-	return (count);
-}
-
-static	char	*filler(const char *s, size_t n)
-{
-	char	*str;
-	size_t	i;
-
-	i = 0;
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!str)
-		return (NULL);
-	while (s[i] && i < n)
-	{
-		str[i] = s[i];
+		if (s[i] != c && j == 0)
+		{
+			countwords++;
+			j = 1;
+		}
+		if (s[i] == c && j == 1)
+			j = 0;
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	return (countwords);
+}
+
+static	int	ft_strlenarray(char *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != c && s[i] != '\0')
+		i++;
+	return (i);
+}
+
+static void	*my_free(char **str, int i)
+{
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -59,26 +69,22 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	if (!s)
+		return (NULL);
+	k = delim((char *)s, c);
 	str = (char **)malloc(sizeof(char *) * (delim(s, c) + 1));
-	if (!(str))
-		return (str);
-	while (s[i])
+	if (!str)
+		return (NULL);
+	while (k--)
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] == '\0')
-			break ;
-		k = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (i > k)
-		{
-			str[j] = filler(s + k, i - k);
-			if (!str[j])
-				return (NULL);
-			j++;
-		}
+		while (*s == c && s != '\0')
+			s++;
+		str[j] = ft_substr((char *)s, 0, ft_strlenarray((char *)s, c));
+		if (!str[j])
+			my_free(str, j);
+		s += ft_strlenarray((char *)s, c);
+		j++;
 	}
-	str[delim(s, c)] = (NULL);
+	str[j] = NULL;
 	return (str);
 }

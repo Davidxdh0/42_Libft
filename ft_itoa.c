@@ -6,11 +6,12 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/30 15:17:50 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/11/15 15:26:41 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/12/10 14:39:25 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_itoa(int n)
 {
@@ -29,6 +30,8 @@ char	*ft_itoa(int n)
 	}
 	else if (n >= 10)
 		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
+	if (str == NULL)
+		return (NULL);
 	else if (n < 10 && n >= 0)
 	{
 		str[0] = n + '0';

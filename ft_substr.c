@@ -6,11 +6,12 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/16 12:28:53 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/11/04 15:15:29 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/12/10 10:22:11 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

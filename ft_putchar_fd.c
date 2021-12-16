@@ -6,11 +6,12 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/18 15:41:42 by david         #+#    #+#                 */
-/*   Updated: 2021/11/04 14:59:13 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/12/16 10:50:34 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);

@@ -6,11 +6,12 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/06 13:48:49 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/11/04 15:13:35 by dyeboa        ########   odam.nl         */
+/*   Updated: 2021/12/10 10:22:15 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
