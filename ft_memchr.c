@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/09 15:04:13 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/12/16 10:50:20 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/01/24 17:47:08 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	char	*charstring;
+	size_t			i;
+	unsigned char	*charstring;
 
 	i = 0;
-	charstring = (char *)s;
+	charstring = (unsigned char *)s;
 	while (i < n)
 	{
-		if (c == charstring[i])
+		if ((unsigned char) c == charstring[i])
 			return ((void *)s + i);
 		i++;
 	}

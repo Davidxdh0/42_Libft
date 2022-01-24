@@ -6,7 +6,7 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/08 15:16:54 by david         #+#    #+#                 */
-/*   Updated: 2021/02/08 15:19:46 by david         ########   odam.nl         */
+/*   Updated: 2022/01/24 15:16:00 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	if (s)
+		ft_putchar_fd('\n', fd);
 }

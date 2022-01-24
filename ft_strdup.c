@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/02 16:53:31 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/12/10 10:22:29 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/01/24 16:23:19 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	int		i;
 
 	i = 0;
-	copy = (char *) malloc(ft_strlen((char *)s1) * (int) sizeof(s1) + 1);
+	copy = (char *) malloc(ft_strlen((char *)s1) + 1);
 	if (!copy)
 		return (NULL);
 	while (s1[i] != 0)

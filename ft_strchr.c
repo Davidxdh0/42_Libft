@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/09 14:53:48 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/11/15 12:34:09 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/01/24 15:18:14 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s + i);
 	while (j <= i)
 	{
-		if (s[j] == c)
+		if (s[j] == (char) c)
 			return ((char *)s + j);
 		j++;
 	}

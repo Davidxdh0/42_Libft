@@ -6,12 +6,13 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/30 15:17:50 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/12/10 14:39:25 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/01/24 14:29:11 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 char	*ft_itoa(int n)
 {
@@ -38,4 +39,10 @@ char	*ft_itoa(int n)
 		str[1] = '\0';
 	}
 	return (str);
+}
+
+int main(void)
+{
+	printf("%s\n", ft_itoa(100000));
+	return (0);
 }

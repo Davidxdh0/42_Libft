@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/06 13:48:49 by dyeboa        #+#    #+#                 */
-/*   Updated: 2021/12/10 10:22:15 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/01/24 16:22:46 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*c;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	c = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
 	if (c == NULL)
 		return (NULL);
