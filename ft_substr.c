@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/16 12:28:53 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/01/24 17:51:29 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/02/02 15:02:00 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	substring = (char *) malloc(sizeof(char) * (len + 1));
+	if (ft_strlen(s) < (size_t)start)
+		return (ft_strdup(""));
+	if (ft_strlen(s) <= (len - start))
+		substring = malloc(sizeof (char) * ft_strlen(s) + 1);
+	else
+		substring = malloc(sizeof(char) * len + 1);
 	if (!substring)
 		return (NULL);
-	if (ft_strlen(s) < (size_t)start)
-	{
-		return (ft_strdup(""));
-	}
 	while (s[start] && i < len)
 	{
 		substring[i] = s[start];

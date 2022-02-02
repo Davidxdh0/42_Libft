@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/09 15:04:13 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/01/24 17:47:08 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/02/02 13:04:55 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)s + i);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

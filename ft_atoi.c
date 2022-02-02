@@ -6,7 +6,7 @@
 /*   By: david <david@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/18 15:21:41 by david         #+#    #+#                 */
-/*   Updated: 2022/01/24 16:51:22 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/02/02 15:14:34 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ static int	ft_isspace(int c)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	minorplus;
-	int	number;
+	int			i;
+	int			minorplus;
+	int			number;
 
 	number = 0;
 	i = 0;

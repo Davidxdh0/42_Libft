@@ -6,43 +6,42 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/30 15:17:50 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/01/24 14:29:11 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/02/02 15:02:23 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
+#include <limits.h>
+
+int	positive(int j)
+{
+	if (j < 0)
+		j *= -1;
+	return (j);
+}
 
 char	*ft_itoa(int n)
 {
-	char	*str;
+	size_t	i;
+	int		j;
+	char	buf[12];
 
-	str = (char *)malloc(sizeof(char) * 2);
-	if (!(str))
-		return (NULL);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (n < 0)
+	i = 11;
+	buf[11] = '\0';
+	while (1)
 	{
-		str[0] = '-';
-		str[1] = '\0';
-		str = ft_strjoin(str, ft_itoa(-n));
+		j = n % 10;
+		i--;
+		buf[i] = '0' + positive(j);
+		n = n / 10;
+		if (n == 0)
+			break ;
 	}
-	else if (n >= 10)
-		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
-	if (str == NULL)
-		return (NULL);
-	else if (n < 10 && n >= 0)
+	if (j < 0)
 	{
-		str[0] = n + '0';
-		str[1] = '\0';
+		i--;
+		buf[i] = '-';
 	}
-	return (str);
-}
-
-int main(void)
-{
-	printf("%s\n", ft_itoa(100000));
-	return (0);
+	return (ft_strdup(buf + i));
 }
