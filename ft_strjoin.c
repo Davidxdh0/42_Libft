@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/16 14:26:29 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/01/24 15:19:16 by dyeboa        ########   odam.nl         */
+/*   Updated: 2022/03/16 12:35:19 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,23 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int		size;
 	int		i;
+	int		j;
 
 	if (!s1 || !s2)
 		return (NULL);
-	size = ft_strlen((char *)s1) + ft_strlen((char *)s2);
-	str = (char *) malloc(((sizeof(char)) * ((size) + 1)));
+	str = malloc((sizeof(char)) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!str)
 		return (NULL);
-	ft_strlcpy(str, s1, (ft_strlen(s1) + 1));
 	i = 0;
-	while (s2[i])
+	j = 0;
+	while (s1[i] && s1)
 	{
-		str[(ft_strlen(s1) + i)] = s2[i];
+		str[i] = s1[i];
 		i++;
 	}
-	str[((ft_strlen(s1)) + (ft_strlen(s2)))] = '\0';
+	while (s2[j])
+		str[i++] = s2[j++];
+	str[i] = '\0';
 	return (str);
 }
