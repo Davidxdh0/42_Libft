@@ -6,7 +6,7 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 15:50:48 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/07/15 13:35:39 by dyeboa        ########   odam.nl         */
+/*   Updated: 2023/03/08 09:03:17 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@
 # include <unistd.h>
 # include <stddef.h>
 
+typedef struct node
+{
+	int			i;
+	int			index;
+	struct node	*previous;
+	struct node	*next;
+}	t_stack;
+
+int			ft_atoi_base(char *str, char *base);
 int		    ft_atoi(const char *str);
 long int    ft_atol(const char *str);
 void	    ft_bzero(void *s, size_t n);
@@ -24,6 +33,7 @@ int		    ft_isalpha(int c);
 int		    ft_isascii(int c);
 int		    ft_isdigit(int c);
 int		    ft_isprint(int c);
+int			ft_isspace(int c);
 char	    *ft_itoa(int n);
 void	    ft_putchar_fd(char c, int fd);
 void	    ft_putnbr_fd(int n, int fd);
@@ -54,4 +64,8 @@ char	    **ft_split(char const *s, char c);
 char	    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	    ft_striteri(char *s, void (*f)(unsigned int, char*));
 
+void		listadd_back(t_stack **stack, t_stack *current);
+t_stack		*list_last(t_stack *stack);
+t_stack		*list_new(int num);
+int			list_len(t_stack *stack);
 #endif
