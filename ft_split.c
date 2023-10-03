@@ -6,13 +6,12 @@
 /*   By: dyeboa <dyeboa@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/16 16:01:58 by dyeboa        #+#    #+#                 */
-/*   Updated: 2022/07/15 13:32:20 by dyeboa        ########   odam.nl         */
+/*   Updated: 2023/10/04 00:29:26 by dyeboa        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -49,18 +48,6 @@ static	int	ft_strlenarray(char *s, char c)
 	return (i);
 }
 
-static void	*my_free(char **str, int i)
-{
-	i = 0;
-	while (str[i])
-	{
-		free(str[i]);
-		i++;
-	}
-	free(str);
-	return (NULL);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
@@ -70,7 +57,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!s || s[0] == '\0')
+	if (!s && s[0] != '\0')
 		return (NULL);
 	k = delim((char *)s, c);
 	str = (char **)malloc(sizeof(char *) * (delim(s, c) + 1));
@@ -78,11 +65,9 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (k--)
 	{
-		while (*s == c && s != '\0')
+		while (*s == c && *s != '\0')
 			s++;
 		str[j] = ft_substr((char *)s, 0, ft_strlenarray((char *)s, c));
-		if (!str[j])
-			my_free(str, j);
 		s += ft_strlenarray((char *)s, c);
 		j++;
 	}
